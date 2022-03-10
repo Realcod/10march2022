@@ -1,0 +1,24 @@
+//trimspaces in a string
+
+#include<iostream>
+using namespace std;
+
+void trimspaces(char ch[]){
+	int j=0;
+	for(int i=0;ch[i]!='\0';i++){
+		if(ch[i]!=' '){
+			ch[j]=ch[i];
+			j++;
+		}
+	}
+	ch[j]='\0';
+}
+
+int main(){
+	char ch[100];
+	cout<<"Enter the string to reverse"<<endl;
+	cin.getline(ch,12);
+	
+	trimspaces(ch);
+	cout<<ch;
+}
